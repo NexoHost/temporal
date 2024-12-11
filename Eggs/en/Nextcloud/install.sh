@@ -5,7 +5,7 @@ if [[ -f "./logs/installed" ]]; then
         exit
     else
         echo "✓ Updating install.sh script"
-        curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/refs/heads/main/Eggs/en/Nextcloud/install.sh.sh -o install.sh
+        curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/refs/heads/main/Eggs/en/Nextcloud/install.sh -o install.sh
         chmod a+x ./install.sh
         echo "✓ Updating start.sh script"
         curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/refs/heads/main/Eggs/en/Nextcloud/start.sh -o start.sh
@@ -37,7 +37,7 @@ mkdir -p logs
 
 rm nginx/conf.d/default.conf
 cd nginx/conf.d/
-wget https://raw.githubusercontent.com/Ashu11-A/Ashu_eggs/main/Connect/en/Nextcloud/default.conf
+wget https://raw.githubusercontent.com/NexoHost/yolks-software/refs/heads/main/Eggs/en/Nextcloud/default.sh
 cd /mnt/server
 cat <<EOF >./logs/install_log.txt
 Version: $NEXTCLOUD_RELEASE
