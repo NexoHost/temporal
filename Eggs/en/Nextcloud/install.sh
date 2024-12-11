@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 if [[ -f "./logs/installed" ]]; then
     if [ "${OCC}" == "1" ]; then 
         php ./nextcloud/occ ${COMMANDO_OCC}
