@@ -6,5 +6,3 @@ echo "🛠 Starting PHP-FPM..."
 
 echo "🛠 Starting Nginx..."
 echo "✅ Successful startup of the EGG by NexoHost.cloud"
-
-# Arte ASCII para mostrar al final del inicio exitoso
