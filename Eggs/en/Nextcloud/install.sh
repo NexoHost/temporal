@@ -26,6 +26,7 @@ fi
 
 echo "✓ Updating install.sh script"
 curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/refs/heads/main/Eggs/en/Nextcloud/install.sh -o install.sh
+
 git clone https://github.com/finnie2006/ptero-nginx ./temp
 cp -r ./temp/nginx /mnt/server/
 cp -r ./temp/php-fpm /mnt/server/
