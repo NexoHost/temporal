@@ -3,15 +3,15 @@ if [[ -f "./logs/installed" ]]; then
     if [ "${OCC}" == "1" ]; then 
         php ./nextcloud/occ ${COMMANDO_OCC}
         exit
-else
-echo "✓ Updating install.sh script"
-curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/install.sh -o install.sh
-chmod a+x ./install.sh
-echo "✓ Updating start.sh script"
+    else
+        echo "✓ Updating install.sh script"
+        curl -sSL https://raw.githubusercontent.com/Ashu11-A/Ashu_eggs/main/Connect/en/Nextcloud/install.sh -o install.sh
+        chmod a+x ./install.sh
+        echo "✓ Updating start.sh script"
 curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/start.sh -o start.sh
 chmod a+x ./start.sh
-./start.sh
-fi
+        ./start.sh
+    fi
 else
     cd /mnt/server/ || exit
     mkdir -p php-fpm
