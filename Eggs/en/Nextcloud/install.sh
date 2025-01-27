@@ -3,15 +3,15 @@ if [[ -f "./logs/installed" ]]; then
     if [ "${OCC}" == "1" ]; then 
         php ./nextcloud/occ ${COMMANDO_OCC}
         exit
-    else
-        echo "✓ Updating install.sh script"
-        curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/install.sh -o install.sh
-        chmod a+x ./install.sh
-        echo "✓ Updating start.sh script"
-        curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/start.sh -o start.sh
-        chmod a+x ./start.sh
-        ./start.sh
-    fi
+else
+echo "✓ Updating install.sh script"
+curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/install.sh -o install.sh
+chmod a+x ./install.sh
+echo "✓ Updating start.sh script"
+curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/start.sh -o start.sh
+chmod a+x ./start.sh
+./start.sh
+fi
 else
     cd /mnt/server/ || exit
     mkdir -p php-fpm
@@ -37,7 +37,7 @@ mkdir -p logs
 
 rm nginx/conf.d/default.conf
 cd nginx/conf.d/
-wget https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/default.sh
+wget https://raw.githubusercontent.com/Ashu11-A/Ashu_eggs/main/Connect/en/Nextcloud/default.conf
 cd /mnt/server
 cat <<EOF >./logs/install_log.txt
 Version: $NEXTCLOUD_RELEASE
