@@ -25,7 +25,7 @@ else
 fi
 
 echo "✓ Updating install.sh script"
-curl -sSL https://raw.githubusercontent.com/Ashu11-A/Ashu_eggs/main/Connect/en/Nextcloud/install.sh -o install.sh
+curl -sSL https://raw.githubusercontent.com/NexoHost/yolks-software/main/Eggs/en/Nextcloud/install.sh -o install.sh
 
 git clone https://github.com/finnie2006/ptero-nginx ./temp
 cp -r ./temp/nginx /mnt/server/
