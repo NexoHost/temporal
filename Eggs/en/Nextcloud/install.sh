@@ -1,10 +1,5 @@
 #!/bin/ash
 
-# Validar que los directorios necesarios existen y que no están en solo lectura
-if [ ! -w "/mnt/server" ]; then
-    echo "Error: /mnt/server está montado como solo lectura o no tiene permisos de escritura."
-    exit 1
-fi
 
 # Crear directorios necesarios si no existen
 mkdir -p /mnt/server/logs /mnt/server/php-fpm/conf.d /mnt/server/tmp
